@@ -1,0 +1,31 @@
+{
+  "manifest_version": 3,
+  "name": "Highlighter",
+  "description": "Highlight selected text in classic yellow. Right-click or custom shortcut.",
+  "version": "1.2",
+  "icons": {
+    "16": "highlighter.png",
+    "48": "highlighter.png",
+    "128": "highlighter.png"
+  },
+  "permissions": ["contextMenus", "storage"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"]
+    },
+    {
+      "matches": ["<all_urls>"],
+      "js": ["injected.js"],
+      "world": "MAIN",
+      "run_at": "document_start"
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": "highlighter.png"
+  }
+}

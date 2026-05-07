@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="popup.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Main View -->
+  <div id="view-main">
+    <div class="header">
+      <h1>HIGHLIGHTER</h1>
+    </div>
+
+    <div class="section">
+      <h2>Color</h2>
+      <div class="control">
+        <label for="brightness">Brightness</label>
+        <input type="range" id="brightness" min="0" max="100">
+        <span id="brightness-val">20</span>
+      </div>
+      <div class="control">
+        <label for="transparency">Opacity</label>
+        <input type="range" id="transparency" min="10" max="100">
+        <span id="transparency-val">100</span>
+      </div>
+      <div class="preview">
+        <div class="preview-half preview-light">
+          The quick <span class="preview-highlight">brown fox jumps</span> over the lazy dog
+        </div>
+        <div class="preview-half preview-dark">
+          The quick <span class="preview-highlight">brown fox jumps</span> over the lazy dog
+        </div>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Shortcut</h2>
+      <div class="shortcut-recorder" id="shortcut-recorder">
+        <span id="shortcut-display">Alt + S</span>
+      </div>
+      <p class="hint">Click above, then press your desired key combo</p>
+      <p class="hint">Click any highlight Text on a page to <span class="text-highlight">remove it</span></p>
+    </div>
+
+    <button id="btn-saved-data" class="btn-saved-data">Saved Data</button>
+
+    <div class="footer">Made by Mogdho Paul</div>
+  </div>
+
+  <!-- Data View -->
+  <div id="view-data" style="display:none;">
+    <div class="data-header">
+      <button id="btn-back" class="btn-back">&#8592;</button>
+      <h2 class="data-title">Saved Data</h2>
+    </div>
+    <div id="sites-list" class="sites-list">
+      <p class="sites-empty">Loading…</p>
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
