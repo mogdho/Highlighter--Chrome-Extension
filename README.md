@@ -40,9 +40,6 @@ A dead-simple, distraction-free text highlighter for Chrome and Brave. No clutte
 - **Premium UI:** Dark-themed settings menu with elegant Playfair Display typography and HSL-based color control.
 - **Resilient Anchoring:** Uses prefix/suffix context matching instead of fragile XPaths, ensuring highlights stay accurate even if the page content changes slightly.
 - **Main World Injection:** Intercepts browser history changes to support seamless navigation on modern web apps.
-
-## 🎨 Under the Hood
-
 - **Zero Dependencies:** Pure Vanilla JS with no external tracking or bloatware.
 - **Storage Optimization:** Event separation (Input vs. Change) limits API calls, effortlessly bypassing Chrome's storage write quotas.
 - **Safe DOM Manipulation:** Utilizes `TreeWalker` to wrap text nodes individually, ensuring host website layouts and native event listeners never break.
